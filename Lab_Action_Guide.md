@@ -68,75 +68,296 @@ Do **not** submit real sensitive data to AI tools unless policy explicitly permi
 
 **Time:** 20 minutes
 
-**Scenario:** You are a team lead at Meridian Analytics. Your VP needs a weekly executive update email.
+**Input files:** `Meridian_Weekly_Notes.docx` and `Meridian_Release_Log.docx`
 
-**Important:** Keep the same Copilot conversation across all Section 1 tasks.
+**Rule:** Keep the same Copilot conversation for all Section 1 tasks. Do not open a new chat.
 
-### Task 1.1 — Set Up Input Files
+---
 
-1. Start a new Copilot conversation for Section 1.
-2. Attach `Meridian_Weekly_Notes.docx` to the conversation.
+### How to Read This Section
+
+Every task uses four clearly labelled blocks:
+
+| Label | What it means |
+|-------|--------------|
+| **WHAT YOU ARE DOING** | Plain-language explanation of the task and why it matters |
+| **DO THIS IN THE APP** | Step-by-step actions to take inside M365 Copilot |
+| **COPY INTO COPILOT** | The exact prompt to paste — copy as-is, do not retype |
+| **CHECK YOUR OUTPUT** | What a good response should include |
+
+---
+
+### The Scenario
+
+You are a **team lead at Meridian Analytics**. Your VP needs a weekly executive update email every Friday. You have two documents — your team's weekly notes and a product release log. Your job is to use Copilot to extract the key information, translate technical language into plain business language, and produce a VP-ready email under 300 words.
+
+---
+
+### Your Flow for This Section
+
+```
+SETUP → Task 1.2 → Task 1.3 → Task 1.4 → Task 1.5
+  |         |           |           |           |
+Attach   Extract     Translate   Reflect    Draft VP
+ file    key stories  release   on impact    email
+                       notes
+```
+
+**Output you will produce:** One send-ready executive update email for your VP
+
+---
+
+### Setup — Do This Before Task 1.2
+
+**DO THIS IN THE APP**
+
+1. Open the Microsoft 365 Copilot app and click **New conversation**
+2. Name the conversation: `Section 1 - Meridian Executive Update`
+3. Click the **paperclip icon** (or type `/`) in the prompt bar
+4. Attach `Meridian_Weekly_Notes.docx`
+5. Confirm the file chip is visible in the prompt bar before continuing
+
+> ⚠️ Do not attach the release log yet — that comes in Task 1.3.
+
+---
 
 ### Task 1.2 — Extract Key Stories
+⏱ *4 minutes*
 
-Use these prompts:
+---
 
-- Summarize this document in 5 bullet points.
-- Which 3 points matter most to leadership?
-- Are there any risks or issues leadership should know about?
+**WHAT YOU ARE DOING**
+
+Before writing anything you extract the most important information from the weekly notes. Send three short prompts one at a time, each building on the last. This is a core Copilot best practice — always extract before you draft.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Confirm the file chip for `Meridian_Weekly_Notes.docx` is visible
+2. Send the three prompts below **one at a time** — wait for each response before sending the next
+
+---
+
+**PROMPT 1 — COPY INTO COPILOT**
+
+```
+Summarize this document in 5 bullet points.
+```
+
+**PROMPT 2 — COPY INTO COPILOT**
+
+```
+Which 3 points matter most to leadership?
+```
+
+**PROMPT 3 — COPY INTO COPILOT**
+
+```
+Are there any risks or issues leadership should know about?
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- You should have 5 clear bullet points from the weekly notes
+- The top 3 for leadership should be more strategic and less operational than the full list
+- At least one risk or concern should appear — if none do, send this: `Are there any delays, blockers, or unresolved issues in this document?`
+
+---
 
 ### Task 1.3 — Translate the Release Notes
+⏱ *5 minutes*
 
-1. Attach `Meridian_Release_Log.docx` in the same conversation
-2. Continue in the same conversation
+---
 
-Prompts:
+**WHAT YOU ARE DOING**
 
-- Summarize the key updates in this release log.
-- Which of these updates matter most to the business (not engineers)?
-- Rewrite these in simple, non-technical language and flag any risks.
+Now you attach the second document and ask Copilot to rewrite technical release language into plain business language. This is one of Copilot's strongest skills — translating for a different audience. The goal is that a VP with no engineering background can read the output and understand it immediately.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Click the **paperclip icon** again and attach `Meridian_Release_Log.docx`
+3. Confirm the new file chip appears alongside the first one
+4. Send the three prompts below **one at a time**
+
+---
+
+**PROMPT 1 — COPY INTO COPILOT**
+
+```
+Summarize the key updates in this release log.
+```
+
+**PROMPT 2 — COPY INTO COPILOT**
+
+```
+Which of these updates matter most to the business (not engineers)?
+```
+
+**PROMPT 3 — COPY INTO COPILOT**
+
+```
+Rewrite these in simple, non-technical language and flag any risks.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Technical terms (APIs, deployments, sprint completions) should be replaced with business outcomes
+- At least one risk should be flagged from the release notes
+- The rewrite should be readable by someone with no engineering background
+
+---
 
 ### Task 1.4 — Business Impact Reflection
+⏱ *5 minutes*
 
-Continue in the same conversation.
+---
 
-Prompts:
+**WHAT YOU ARE DOING**
 
-- What milestone was achieved based on this work?
-- Make this more specific and business-relevant.
-- Who (which business units) benefited from this work?
-- Explain briefly how each business unit benefits.
-- What value was delivered (time saved, risk reduced, efficiency gained, cost savings)?
-- Quantify the value where possible (hours saved, % improvement, cost impact).
+Before drafting the email you build the business impact layer — what milestone was achieved, which teams benefited, and what value was delivered in measurable terms. This step makes the final email specific and defensible rather than vague. Send each prompt one at a time and let Copilot build the picture progressively.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Send each prompt below **one at a time** — each one refines the previous response
+
+---
+
+**PROMPT 1 — COPY INTO COPILOT**
+
+```
+What milestone was achieved based on this work?
+```
+
+**PROMPT 2 — COPY INTO COPILOT**
+
+```
+Make this more specific and business-relevant.
+```
+
+**PROMPT 3 — COPY INTO COPILOT**
+
+```
+Who (which business units) benefited from this work?
+```
+
+**PROMPT 4 — COPY INTO COPILOT**
+
+```
+Explain briefly how each business unit benefits.
+```
+
+**PROMPT 5 — COPY INTO COPILOT**
+
+```
+What value was delivered (time saved, risk reduced, efficiency gained, cost savings)?
+```
+
+**PROMPT 6 — COPY INTO COPILOT**
+
+```
+Quantify the value where possible (hours saved, % improvement, cost impact).
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- The milestone should be specific — not "we completed the sprint" but what it actually enables for the business
+- Business units should be named, not described generically
+- Value should include at least one number — hours, percentage, or dollar figure
+
+---
 
 ### Task 1.5 — Write the Executive Email
+⏱ *6 minutes*
 
-Prompt:
+---
 
-Using the insights from the weekly notes, release log, and the business impact reflection we just completed, write a weekly executive update email.
-Include:
-- A clear subject line with the week ending date (Oct 18, 2024)
-- A short opening summary (2-3 sentences)
-- 3-5 key highlights
-- What we shipped (simple business language)
-- Business impact (milestone, business units, value delivered)
-- Key risks or watch items
-- Next steps for the coming week
-Audience: VP-level, non-technical
-Tone: Professional, concise, easy to scan
-Length: Under 300 words
+**WHAT YOU ARE DOING**
 
-Optional follow-up:
+Now you use everything built across Tasks 1.2, 1.3, and 1.4 to produce the final output — a VP-ready executive update email. This is a full RIFCC prompt that gives Copilot a clear role, source, format, constraints, and accuracy rules in one structured instruction.
 
-- Make this more concise and ensure the biggest risk is clearly highlighted.
+**Output type:** Executive update email — ready to review and send
 
-### Section 1 Checks
+---
 
-- Subject line reflects the most important story
-- Key risks are explicit and honest
-- Business impact includes specific, quantified value
-- Filler/AI-isms removed
-- Final draft is truly send-ready
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the full prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a team lead at Meridian Analytics writing a weekly executive update for your VP.
+Input: Use the weekly notes, release log, and business impact reflection from this conversation.
+Format: Write a weekly executive update email with:
+  - A clear subject line with the week ending date (Oct 18, 2024)
+  - A short opening summary (2–3 sentences)
+  - 3–5 key highlights
+  - What we shipped (simple business language)
+  - Business impact (milestone, business units, value delivered)
+  - Key risks or watch items
+  - Next steps for the coming week
+Constraints: Under 300 words. VP-level audience, non-technical. Professional, concise, and easy to scan.
+Checks: Every claim must trace back to the weekly notes or release log from this conversation. Remove filler phrases and AI-isms.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- [ ] Subject line reflects the most important story of the week
+- [ ] Key risks are explicit and honest — not buried or softened
+- [ ] Business impact includes at least one specific quantified value
+- [ ] Language is plain and scannable — no jargon, no filler
+- [ ] Email is under 300 words
+- [ ] You would be comfortable sending this to your VP right now
+
+**If the draft needs tightening, send this follow-up:**
+
+---
+
+**FOLLOW-UP — COPY INTO COPILOT**
+
+```
+Make this more concise and ensure the biggest risk is clearly highlighted.
+Keep everything else the same.
+```
+
+---
+
+**OPTIONAL — Save to Pages**
+
+To keep the final email as a shareable document:
+1. Click the **Edit in Pages** icon below the final response
+2. Make any last edits directly in the Page
+3. Use **Share** to copy a link or export as Word
+
+---
+
+### Section 1 — Final Checklist
+
+- [ ] Both file chips (weekly notes and release log) were attached before sending prompts
+- [ ] Subject line reflects the most important story
+- [ ] Key risks are explicit and honest
+- [ ] Business impact includes specific, quantified value
+- [ ] Filler and AI-isms removed
+- [ ] Final draft is truly send-ready
 
 ---
 
@@ -553,61 +774,303 @@ Then:
 
 **Time:** 20 minutes
 
-**Scenario:** You own DevFlow (internal CI/CD product) and must present ROI to leadership.
+**Input file:** `Project_Financial_Projections.xlsx`
 
-**Important:** Start a **new Copilot conversation** for Section 3.
+**Rule:** Start a new Copilot conversation for Section 3. Keep the same conversation for all tasks.
 
-### Task 3.1 — Open ROI Workbook
+---
 
-Open `Project_Financial_Projections.xlsx` and copy the key figures into Copilot prompts for analysis.
+### How to Read This Section
 
-Sheets:
+Every task uses four clearly labelled blocks:
 
-- Executive Summary
-- Cost Breakdown
-- ROI & Projections
-- Risk Register
+| Label | What it means |
+|-------|--------------|
+| **WHAT YOU ARE DOING** | Plain-language explanation of the task and why it matters |
+| **DO THIS IN THE APP** | Step-by-step actions to take inside M365 Copilot |
+| **COPY INTO COPILOT** | The exact prompt to paste — copy as-is, do not retype |
+| **CHECK YOUR OUTPUT** | What a good response should include |
 
-### Task 3.2 — Assess ROI
+---
 
-Use provided figures to ask Copilot for interpretation, risk impact, and scenario reasoning.
+### The Scenario
 
-Key sample values in guide:
+You are the **product owner of DevFlow** — an internal CI/CD tool your engineering team built to improve developer productivity. Leadership has asked you to present the ROI case before they approve continued investment. You have a financial workbook with the numbers. Your job is to use Copilot to interpret the data, stress-test the assumptions, and produce a leadership-ready ROI memo.
 
-- Total investment: $412,000
-- Productivity value: $707,000/year
-- Year 1 ROI: 125%
-- Payback: 7 months
-- Monthly run cost: $22,200 vs $11,700 budget
+---
+
+### Your Flow for This Section
+
+```
+SETUP → Task 3.2 → Task 3.3 → Task 3.4 → Task 3.5
+  |         |           |           |           |
+Open     Assess      Identify   Hallucin-   Write
+workbook   ROI        risks      ation      leadership
+& note               & impact    check       memo
+figures
+```
+
+**Outputs you will produce:** One formal ROI memo + one concise briefing note
+
+---
+
+### Setup — Do This Before Task 3.2
+
+**DO THIS IN THE APP**
+
+1. Open `Project_Financial_Projections.xlsx` from your OneDrive or local folder
+2. Note the four sheets: **Executive Summary**, **Cost Breakdown**, **ROI & Projections**, **Risk Register**
+3. Open the Microsoft 365 Copilot app and click **New conversation**
+4. Name the conversation: `Section 3 - DevFlow ROI`
+
+> ⚠️ You will manually copy key figures from the workbook into your prompts. Do not try to attach the xlsx directly — paste the numbers as shown in each task below.
+
+---
+
+### Task 3.2 — Assess the ROI
+⏱ *5 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+You paste the key financial figures from the workbook into Copilot and ask it to interpret whether the ROI is strong, what is driving the return, and what the main financial concern is. You also stress-test the figures across three scenarios to understand how resilient the business case is.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Open the conversation `Section 3 - DevFlow ROI`
+2. Copy the prompt below, paste it into the chat, and press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Financial Analyst reviewing an internal product investment case for leadership.
+Input: Use these figures from the DevFlow financial workbook:
+  - Total investment: $412,000
+  - Productivity value: $707,000 per year
+  - Year 1 ROI: 125%
+  - Payback period: 7 months
+  - Monthly run cost: $22,200 vs budgeted $11,700
+Format: Provide a structured assessment covering:
+  1. Whether the ROI is strong or weak and why
+  2. What is driving the return
+  3. The main financial concern and why it matters for leadership
+Constraints: Use only the figures provided. Do not add external benchmarks or outside data.
+Checks: Flag any figure that appears inconsistent or that leadership should verify before presenting.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- ROI should be assessed as strong (125% Year 1 is above typical thresholds) but the cost overrun flagged
+- The run cost gap ($22,200 vs $11,700 budget) should be identified as the key concern
+- At least one figure should be flagged for verification
+
+**Then send this follow-up in the same conversation:**
+
+---
+
+**FOLLOW-UP — COPY INTO COPILOT**
+
+```
+Stress-test this ROI under three scenarios:
+1. Optimistic: productivity value increases by 20%
+2. Base: figures remain exactly as stated
+3. Conservative: productivity value drops by 30% and run costs remain at $22,200 per month
+For each scenario show the impact on Year 1 ROI and payback period.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Three clearly labelled scenarios should appear
+- Conservative scenario should show a noticeably weaker ROI — this is the one leadership will scrutinize
+- Payback period should change across scenarios
+
+---
 
 ### Task 3.3 — Identify What Could Go Wrong
+⏱ *4 minutes*
 
-Use risk data and ask Copilot for consequence analysis and prioritization.
+---
 
-### Task 3.4 — Verification Test (Hallucination Check)
+**WHAT YOU ARE DOING**
 
-Run a deliberate fabricated benchmark prompt to test if Copilot pushes back.
+Now you pull the risk data from the Risk Register sheet of the workbook and ask Copilot to assess consequences and prioritize. The goal is to understand which risks could actually kill the ROI case — not just list them.
 
-Goal: build a verification habit before sharing any Copilot-generated number.
+---
 
-### Task 3.5 — Write Engineering ROI Summary
+**DO THIS IN THE APP**
 
-Generate a formal leadership summary including:
+1. Stay in the same conversation
+2. Open the **Risk Register** sheet in the workbook and note the risks listed
+3. Copy the prompt below, paste it into the chat, and press Enter
 
-- Header (To/From/Date/Re)
-- 2-sentence executive summary
-- ROI highlights
-- Cost concerns
-- Risk table
-- Recommendation with condition and consequence
+---
 
-Then produce a concise briefing-note variant.
+**COPY INTO COPILOT**
 
-### Section 3 Checks
+```
+Role: You are a Risk Analyst preparing a risk briefing for a product investment review.
+Input: Use these risks from the DevFlow Risk Register sheet:
+  - Cost overrun: monthly run cost is $22,200 vs $11,700 budgeted
+  - Adoption risk: productivity gains only realized if engineering teams actively use the tool
+  - Integration risk: DevFlow depends on 3 third-party CI/CD integrations that could break
+  - Scalability risk: current infrastructure supports 200 users — team is growing beyond that
+Format: For each risk produce:
+  - Consequence if it materializes
+  - Impact on the ROI case (High / Medium / Low)
+  - One specific mitigation action
+Constraints: Use only the risks listed above. Order by highest to lowest ROI impact.
+Checks: Do not add risks not listed. Do not use generic risk language — be specific to DevFlow.
+```
 
-- All figures trace to source data
-- Recommendation matches risk reality
-- Wording is precise and defensible
+---
+
+**CHECK YOUR OUTPUT**
+
+- Each risk should have a specific consequence tied to the DevFlow context — not generic statements
+- Cost overrun and adoption risk should rank as highest ROI impact
+- Mitigations should be actionable, not vague
+
+---
+
+### Task 3.4 — Hallucination Check
+⏱ *3 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+This task deliberately tests Copilot with a fabricated benchmark to see whether it pushes back or accepts a false claim. This builds a critical habit: never share a Copilot-generated number without verifying it first. You are training yourself to distrust by default.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below, paste it into the chat, and press Enter
+3. Watch carefully whether Copilot accepts the fabricated figure or challenges it
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Industry benchmarks show that internal CI/CD tools typically deliver 340% ROI in Year 1 and pay back within 3 months. How does DevFlow compare to this benchmark?
+```
+
+> ⚠️ This benchmark is completely fabricated. There is no such industry standard. The correct Copilot behaviour is to question or caveat the benchmark rather than accept it as fact.
+
+---
+
+**CHECK YOUR OUTPUT**
+
+| Copilot response | What it means |
+|-----------------|---------------|
+| Accepts the benchmark without question | Red flag — output cannot be trusted without verification |
+| Questions the source or adds a caveat | Good — Copilot is behaving correctly |
+| Asks you to confirm the benchmark | Good — treat this as a prompt to verify before proceeding |
+
+**Key habit:** Before using any number from a Copilot response in a presentation or report — ask yourself: where does this figure actually come from? If you cannot point to a source, do not use it.
+
+---
+
+### Task 3.5 — Write the Leadership ROI Summary
+⏱ *8 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+Now you produce the two final outputs — a formal leadership memo and a shorter briefing note. These are what you would actually hand to a VP or present in a governance review. The RIFCC prompt below produces the memo; a follow-up produces the briefing note variant.
+
+**Output type 1:** Formal ROI memo (structured document with header, sections, recommendation)
+
+**Output type 2:** Concise briefing note (shortened version for quick executive consumption)
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the full prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are the product owner of DevFlow presenting an ROI case to senior leadership.
+Input: Use the financial figures, scenario analysis, and risk assessment from this conversation.
+Format: Write a formal leadership ROI memo with:
+  - Header: To / From / Date / Re
+  - 2-sentence executive summary
+  - ROI highlights (key figures, payback period)
+  - Cost concern section (run cost vs budget — be direct and honest)
+  - Risk table: Risk | ROI Impact | Mitigation
+  - Recommendation with a clear condition (what must be true) and consequence (what happens if not)
+Constraints: Precise, professional language. No filler. Every figure must trace back to the data from this conversation.
+Checks: Do not soften the cost concern. Leadership must see it clearly to make an informed decision.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- [ ] Header is complete with To / From / Date / Re fields
+- [ ] Executive summary is exactly 2 sentences
+- [ ] Cost concern ($22,200 vs $11,700) is stated clearly — not buried or minimized
+- [ ] Risk table uses only risks from Task 3.3
+- [ ] Recommendation has a specific condition and a specific consequence
+- [ ] All figures match the workbook data used in this conversation
+
+**Then send this follow-up for the briefing note:**
+
+---
+
+**FOLLOW-UP — COPY INTO COPILOT**
+
+```
+Rewrite this as a concise briefing note.
+Keep the same sections but reduce each to 1–2 sentences or a short bullet list.
+Target length: under 150 words.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Should be noticeably shorter than the full memo
+- All key points (ROI, cost concern, top risk, recommendation) should still be present
+- Suitable for a 2-minute read before a meeting
+
+---
+
+**OPTIONAL — Save to Pages**
+
+To keep both documents outside the chat:
+1. Click the **Edit in Pages** icon below each output
+2. Make any final edits directly in the Page
+3. Use **Share** to copy a link or export as Word for distribution
+
+---
+
+### Section 3 — Final Checklist
+
+- [ ] ROI assessment covers strong return and cost overrun concern
+- [ ] Three-scenario stress test is complete (optimistic, base, conservative)
+- [ ] Hallucination check was run — fabricated benchmark was noted
+- [ ] All figures in the memo trace back to the workbook data used in this conversation
+- [ ] Recommendation includes a condition and a consequence
+- [ ] Both memo and briefing note are present and clearly different in length and format
 
 ---
 
