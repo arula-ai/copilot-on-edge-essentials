@@ -142,111 +142,405 @@ Optional follow-up:
 
 ## Section 2: Teams Meeting Recap + Governance Workflow
 
-**Time:** 20 minutes
+**Time:** 20 minutes core · 8 to 12 minutes advanced
 
-**Scenario:** You are a Product Strategy Analyst at a regional bank evaluating `ClearSpend`. You need to combine the written product brief with insights from a strategy review meeting and produce governance-ready outputs leadership can act on.
+**Input files:** `ClearSpend_Product_Brief.txt` and `Strategy_Review_Transcript.txt`
 
-**Important:** Start a **new Copilot conversation** for Section 2.
+**Rule:** Start a new Copilot conversation for Section 2 and keep the same conversation for all tasks.
 
-### Section 2 Runtime Structure
+---
 
-- **Core path (recommended for 20 min):** Tasks 2.1 to 2.4
-- **Advanced extension (+8 to 12 min):** Tasks 2.5 and 2.6
+### How to Read This Section
 
-### Section 2 Required Setup (Do First)
+Every task uses four clearly labelled blocks:
 
-1. Start a new conversation named `Section 2 - ClearSpend Governance`.
-2. Attach both files to the same prompt context:
-   - `ClearSpend_Product_Brief.txt`
-   - `Strategy_Review_Transcript.txt`
-3. Confirm both file chips are visible before sending prompts.
-4. If a response references only one source, re-run with: `Use both attached files as sources and cite source type for each finding.`
+| Label | What it means |
+|-------|--------------|
+| **WHAT YOU ARE DOING** | Plain-language explanation of the task and why it matters |
+| **DO THIS IN THE APP** | Step-by-step actions to take inside M365 Copilot |
+| **COPY INTO COPILOT** | The exact prompt to paste — copy as-is, do not retype |
+| **CHECK YOUR OUTPUT** | What a good response should include |
 
-### Task 2.1 — Open Sources and Set Grounding Rules
+---
 
-Ask:
-   - Summarize what is confirmed versus still under discussion.
-   - Separate decisions into: Approved, Proposed, Pending.
-   - For each item, cite which source it came from (brief or transcript).
+### The Scenario
 
-### Task 2.2 — Build a Decision Register (Governance Layer)
+You are a **Product Strategy Analyst at a regional bank** evaluating ClearSpend — a new personal finance dashboard the bank is considering launching for retail customers.
 
-Use a structured prompt to produce a decision register.
+You have two source documents:
+- **ClearSpend_Product_Brief.txt** — the formal written product brief with decisions, risks, and timelines
+- **Strategy_Review_Transcript.txt** — the transcript from a recent strategy meeting where the team discussed the launch
 
-Prompt:
+Your job is to combine both sources and produce governance-ready outputs that leadership can act on.
 
-- Role: You are a Product Governance Analyst preparing a decision log for leadership review.
-- Input: ClearSpend product brief and strategy meeting transcript.
-- Format: Table with columns: Decision | Status (Approved/Proposed/Pending) | Decision Owner | Approver | Decision Date | Effective Date | Dependency | Confidence (High/Medium/Low).
-- Constraints: Use only content present in the two sources. Mark unknown fields as "TBD".
+---
 
-Follow-up:
+### Your Flow for This Section
 
-- List any decision items that are ambiguous or conflicting across sources.
+```
+SETUP → Task 2.1 → Task 2.2 → Task 2.3 → Task 2.4 → [Task 2.5 → Task 2.6 Advanced]
+  |         |           |           |           |              |            |
+Attach   Ground      Decision    Action      Risk          Two         Verify
+ files   sources    Register   Register   Register      Briefs       output
+```
 
-### Task 2.3 — Build an Action Register (Execution Layer)
+**Core path (20 min):** Tasks 2.1 to 2.4
 
-Prompt:
+**Advanced extension (+8 to 12 min):** Tasks 2.5 and 2.6
 
-- Create an action register table with columns: Owner | Action | Due Date | Success Criteria | First Milestone (within 7 days).
-- Include only actions explicitly committed in the source content.
-- If owner or due date is missing, flag it as a governance gap.
+---
 
-Follow-up:
+### Setup — Do This Before Task 2.1
 
-- Rewrite the same register as short numbered actions for Teams/Planner update format.
+**DO THIS IN THE APP**
 
-### Task 2.4 — Create a Prioritized Risk Register (Scoring Required)
+1. Open the Microsoft 365 Copilot app and click **New conversation**
+2. Name the conversation: `Section 2 - ClearSpend Governance`
+3. Click the **paperclip icon** (or type `/`) in the prompt bar
+4. Attach `ClearSpend_Product_Brief.txt`
+5. Attach `Strategy_Review_Transcript.txt` to the same prompt
+6. Confirm **both file chips** are visible in the prompt bar before continuing
 
-Use this scoring rubric so all participants produce comparable outputs:
+> ⚠️ Both files must be attached before you send any prompt. If only one chip is visible, attach the second file before proceeding.
 
-- **Impact (1-5):**
-   - 1 = Negligible customer or business impact
-   - 2 = Minor friction, no launch risk
-   - 3 = Moderate impact, requires mitigation before scale
-   - 4 = Major impact, may delay launch or trigger compliance concern
-   - 5 = Critical impact, launch blocker or material regulatory exposure
-- **Likelihood (1-5):**
-   - 1 = Rare
-   - 2 = Unlikely
-   - 3 = Possible
-   - 4 = Likely
-   - 5 = Almost certain
-- **Priority Score:** Impact × Likelihood
-- **Escalation rule:** Escalate any score >= 16
+---
 
-Prompt:
+### Task 2.1 — Ground the Sources and Understand What Is Decided
+⏱ *4 minutes*
 
-- Build a risk register from the brief and transcript with columns: Risk | Impact (1-5) | Likelihood (1-5) | Priority Score (Impact x Likelihood) | Mitigation | Mitigation Owner | Review Date.
-- Order rows from highest to lowest Priority Score.
-- Include an "Escalate" tag for any risk with score >= 16.
+---
 
-### Task 2.5 — Generate Two Audience Outputs
+**WHAT YOU ARE DOING**
 
-Create both outputs from the same source set:
+Before building any registers, you need Copilot to read both files together and separate what is already decided from what is still being discussed. This is called grounding — you are setting the rules for everything that follows. Every output in this section depends on getting this right first.
 
-1. **Executive Brief (leadership):**
-   - 1-page summary with decision status, top 3 risks, and required executive decisions.
-2. **Execution Brief (delivery team):**
-   - concise action plan with owners, deadlines, and next 7-day milestones.
+---
 
-Constraint: Keep both outputs factual and traceable to source; no assumptions unless labeled ASSUMPTION.
+**DO THIS IN THE APP**
 
-### Task 2.6 — Verification and Quality Gate
+1. Confirm both file chips are visible in the prompt bar
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
 
-Run this check before finalizing output:
+---
 
-- For each decision, risk, and action in your previous response, indicate: Source Found (Yes/No), Source Type (Brief/Transcript), Confidence (High/Medium/Low).
-- Flag anything we should not use in a VP briefing.
-- List missing owner/date fields as blockers.
+**COPY INTO COPILOT**
 
-### Section 2 Checks
+```
+Using both attached files as your sources:
+1. Summarize what is confirmed versus still under discussion.
+2. Separate all decisions into three categories: Approved, Proposed, Pending.
+3. For each item, cite which source it came from — Brief or Transcript.
+```
 
-- Decision register includes status, owner, approver, and confidence
-- Action register has owners, due dates, and measurable success criteria
-- Risk register includes impact, likelihood, and priority score
-- Executive and execution briefs are both present and audience-specific
-- All key outputs pass the source verification gate
+---
+
+**CHECK YOUR OUTPUT**
+
+- Copilot should reference **both** the brief and the transcript — not just one
+- You should see decisions in all three categories: Approved, Proposed, and Pending
+- Each item should be labelled with its source (Brief or Transcript)
+
+> If responses only reference one file, paste this recovery prompt and retry:
+> `Use both attached files as sources and cite source type for each finding.`
+
+---
+
+### Task 2.2 — Build a Decision Register
+⏱ *4 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+A Decision Register is a formal table that captures every decision — who made it, what its current status is, who needs to approve it, and how confident we are in the information. This is what leadership uses to track what has been decided and what still needs a decision. You are producing this from the two source files.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Governance Analyst preparing a decision log for leadership review.
+Input: Use only the ClearSpend product brief and strategy meeting transcript attached to this conversation.
+Format: Produce a table with these columns:
+  Decision | Status (Approved / Proposed / Pending) | Decision Owner | Approver | Decision Date | Effective Date | Dependency | Confidence (High / Medium / Low)
+Constraints: Use only content present in the two source files. Mark any unknown fields as TBD.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- The table should have a row for every decision from both sources
+- Unknown fields should show **TBD** — not be left blank or guessed
+- Status column should use only: Approved, Proposed, or Pending
+
+**Then send this follow-up in the same conversation:**
+
+---
+
+**COPY INTO COPILOT**
+
+```
+List any decision items that are ambiguous or conflicting across the two sources.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Copilot should identify at least one conflict between the brief and the transcript
+- If it says there are no conflicts, that is a signal to check the sources yourself
+
+---
+
+### Task 2.3 — Build an Action Register
+⏱ *4 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+An Action Register captures every commitment made in the source documents — who owns it, when it is due, and what success looks like. Only explicitly stated actions belong here. If an owner or due date is missing from the source, that is a governance gap and must be flagged — not filled in with a guess.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Governance Analyst building an execution-layer action register for a product launch review.
+Input: Use only the ClearSpend product brief and strategy meeting transcript attached to this conversation.
+Format: Table with these columns:
+  Owner | Action | Due Date | Success Criteria | First Milestone (within 7 days)
+Constraints: Include only actions explicitly committed to in the source content. Do not infer or fill in missing information.
+Checks: If owner or due date is missing from the source, flag it as a governance gap in that cell. Do not add anything not present in the sources.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Every action should trace back to something explicitly stated in one of the two files
+- Any row with a missing owner or date should be visibly flagged — not left blank
+
+**Then send this follow-up in the same conversation:**
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Rewrite the same action register as short numbered action items in Teams/Planner update format.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- The output should be a numbered list — short, plain, action-oriented
+- Same items as the table, just reformatted for a team update or Planner board
+
+---
+
+### Task 2.4 — Build a Risk Register
+⏱ *6 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+A Risk Register scores every risk from the source documents using a consistent method so that all participants produce comparable results. You are scoring each risk on Impact and Likelihood, calculating a Priority Score, and flagging the highest-risk items for escalation.
+
+---
+
+**READ BEFORE YOU PROMPT — The Scoring Rubric**
+
+Use these scales exactly. Do not change the numbers.
+
+**Impact (1–5)**
+
+| Score | Meaning |
+|-------|---------|
+| 1 | Negligible customer or business impact |
+| 2 | Minor friction, no launch risk |
+| 3 | Moderate impact, requires mitigation before scale |
+| 4 | Major impact, may delay launch or trigger compliance concern |
+| 5 | Critical impact, launch blocker or material regulatory exposure |
+
+**Likelihood (1–5)**
+
+| Score | Meaning |
+|-------|---------|
+| 1 | Rare |
+| 2 | Unlikely |
+| 3 | Possible |
+| 4 | Likely |
+| 5 | Almost certain |
+
+**Priority Score = Impact × Likelihood**
+
+**Escalation rule: Any risk with a Priority Score of 16 or higher must be tagged Escalate**
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Risk Analyst preparing a prioritized risk register for a product governance review.
+Input: Use only the ClearSpend product brief and strategy meeting transcript attached to this conversation.
+Format: Table with these columns:
+  Risk | Impact (1–5) | Likelihood (1–5) | Priority Score (Impact x Likelihood) | Mitigation | Mitigation Owner | Review Date
+Constraints: Use only risks present in the source files. Order rows from highest to lowest Priority Score. Add an "Escalate" tag to any risk with a Priority Score of 16 or higher.
+Checks: Verify every Priority Score equals Impact x Likelihood. Do not add risks not present in the sources.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Rows should be ordered highest Priority Score to lowest
+- Any score of 16 or above should be tagged **Escalate**
+- Each risk should trace back to either the brief or the transcript
+
+---
+
+### Task 2.5 — Produce Two Audience Outputs *(Advanced)*
+⏱ *5 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+The same source information needs to be presented differently depending on who is reading it. Leadership needs a high-level picture of decisions and risks. The delivery team needs specific actions, owners, and deadlines. You will produce both from the same conversation — without adding any new information.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Governance Analyst preparing two audience-specific briefing documents for a product launch review.
+Input: Use only the decisions, actions, and risks built in this conversation from the attached source files.
+Format: Produce two clearly labelled separate outputs:
+  Output 1 — Executive Brief (for leadership):
+    - 1-page summary
+    - Decision status overview
+    - Top 3 risks with Priority Scores
+    - List of decisions that still require executive sign-off
+  Output 2 — Execution Brief (for the delivery team):
+    - Concise action plan
+    - Owner and deadline for each action
+    - Next 7-day milestones
+Constraints: Both outputs must be concise and written for their specific audience. Do not mix content between the two.
+Checks: Keep both outputs factual and traceable to the source files. If anything is assumed rather than sourced, label it clearly as ASSUMPTION.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+| Aspect | Executive Brief | Execution Brief |
+|--------|----------------|----------------|
+| Audience | Leadership | Delivery team |
+| Focus | Decisions and risks | Actions and milestones |
+| Length | ~1 page | Concise bullet list |
+| Tone | Strategic | Operational |
+
+Both documents should exist as separate, clearly labelled outputs in the same response.
+
+---
+
+### Task 2.6 — Verification and Quality Gate *(Advanced)*
+⏱ *5 minutes*
+
+---
+
+**WHAT YOU ARE DOING**
+
+Before any of these outputs go to a VP briefing, you run a final check. You are asking Copilot to review every decision, risk, and action and confirm whether it can actually be found in the source files — and flag anything that is not safe to present to leadership.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+For each decision, risk, and action in the outputs from this conversation:
+Indicate:
+  - Source Found: Yes or No
+  - Source Type: Brief or Transcript
+  - Confidence: High, Medium, or Low
+Then:
+  - Flag anything we should not use in a VP briefing
+  - List any missing owner or date fields as blockers
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+| Result | What to do |
+|--------|-----------|
+| Source Found: **Yes** | Safe to include |
+| Source Found: **No** | Remove from the output |
+| Confidence: **Low** | Note it or remove it before presenting |
+| Listed as a **blocker** | Must be resolved before the briefing |
+
+---
+
+### Section 2 — Final Checklist
+
+**Core complete — Tasks 2.1 to 2.4**
+- [ ] Both file chips were visible before sending the first prompt
+- [ ] Decision register includes Status, Owner, Approver, and Confidence for every row
+- [ ] Action register has owners and due dates — missing fields are flagged as governance gaps
+- [ ] Risk register includes Impact, Likelihood, and Priority Score for every risk
+- [ ] All risks scoring 16 or above are tagged Escalate
+
+**Advanced complete — Tasks 2.5 and 2.6**
+- [ ] Executive Brief and Execution Brief are both present and clearly different from each other
+- [ ] All outputs have passed the source verification gate
+- [ ] No blockers remain unresolved
+
+---
 
 ### Section 2 Completion Rule
 
