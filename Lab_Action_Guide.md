@@ -129,42 +129,38 @@ You are a **team lead at Meridian Analytics**. Your VP needs a weekly executive 
 
 **WHAT YOU ARE DOING**
 
-Before writing anything you extract the most important information from the weekly notes. Send three short prompts one at a time, each building on the last. This is a core Copilot best practice — always extract before you draft.
+Before writing anything you extract the most important information from the weekly notes. One structured prompt asks Copilot for all three things at once — a full summary, the leadership priorities, and any risks — returned in clearly labelled sections you can use directly in the email draft.
 
 ---
 
 **DO THIS IN THE APP**
 
 1. Confirm the file chip for `Meridian_Weekly_Notes.docx` is visible
-2. Send the three prompts below **one at a time** — wait for each response before sending the next
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
 
 ---
 
-**PROMPT 1 — COPY INTO COPILOT**
+**COPY INTO COPILOT**
 
 ```
-Summarize this document in 5 bullet points.
-```
-
-**PROMPT 2 — COPY INTO COPILOT**
-
-```
-Which 3 points matter most to leadership?
-```
-
-**PROMPT 3 — COPY INTO COPILOT**
-
-```
-Are there any risks or issues leadership should know about?
+Role: You are a team lead at Meridian Analytics preparing a weekly executive update.
+Input: Use only the attached Meridian_Weekly_Notes.docx.
+Format: Respond in three clearly labelled sections:
+  Section 1 — Full Summary: Summarize the document in 5 bullet points
+  Section 2 — Leadership Priorities: List the 3 points that matter most to leadership, with one sentence explaining why each matters
+  Section 3 — Risks and Issues: List any risks, blockers, or concerns leadership should know about
+Constraints: Use only content present in the document. Do not add assumptions or outside context.
+Checks: If no risks are found, explicitly state "No risks identified in this document" in Section 3.
 ```
 
 ---
 
 **CHECK YOUR OUTPUT**
 
-- You should have 5 clear bullet points from the weekly notes
-- The top 3 for leadership should be more strategic and less operational than the full list
-- At least one risk or concern should appear — if none do, send this: `Are there any delays, blockers, or unresolved issues in this document?`
+- Section 1 should have exactly 5 bullet points
+- Section 2 priorities should be more strategic than the full summary — not just the first 3 bullets repeated
+- Section 3 should surface at least one risk or concern — if it states none, check the document yourself before moving on
 
 ---
 
@@ -175,7 +171,7 @@ Are there any risks or issues leadership should know about?
 
 **WHAT YOU ARE DOING**
 
-Now you attach the second document and ask Copilot to rewrite technical release language into plain business language. This is one of Copilot's strongest skills — translating for a different audience. The goal is that a VP with no engineering background can read the output and understand it immediately.
+Now you attach the second document and ask Copilot to summarize, assess business relevance, and rewrite the release notes into plain business language — all in one structured prompt. One send gives you three clearly labelled sections you can use directly when drafting the email.
 
 ---
 
@@ -184,35 +180,32 @@ Now you attach the second document and ask Copilot to rewrite technical release 
 1. Stay in the same conversation
 2. Click the **paperclip icon** again and attach `Meridian_Release_Log.docx`
 3. Confirm the new file chip appears alongside the first one
-4. Send the three prompts below **one at a time**
+4. Copy the prompt below and paste it into the chat
+5. Press Enter
 
 ---
 
-**PROMPT 1 — COPY INTO COPILOT**
+**COPY INTO COPILOT**
 
 ```
-Summarize the key updates in this release log.
-```
-
-**PROMPT 2 — COPY INTO COPILOT**
-
-```
-Which of these updates matter most to the business (not engineers)?
-```
-
-**PROMPT 3 — COPY INTO COPILOT**
-
-```
-Rewrite these in simple, non-technical language and flag any risks.
+Role: You are a team lead at Meridian Analytics reviewing a product release log for a VP executive update.
+Input: Use only the attached Meridian_Release_Log.docx.
+Format: Respond in three clearly labelled sections:
+  Section 1 — Release Summary: List the key updates from this release log
+  Section 2 — Business Relevance: Identify which updates matter most to the business (not engineers) and briefly explain the business impact of each
+  Section 3 — Plain Language Rewrite: Rewrite the key updates in simple, non-technical language. Flag any risks at the end of this section.
+Constraints: No technical jargon in Section 3. Use only content present in the release log.
+Checks: Every item in Sections 2 and 3 must trace back to Section 1. If no risks are found, state "No risks identified" — do not leave Section 3 incomplete.
 ```
 
 ---
 
 **CHECK YOUR OUTPUT**
 
-- Technical terms (APIs, deployments, sprint completions) should be replaced with business outcomes
-- At least one risk should be flagged from the release notes
-- The rewrite should be readable by someone with no engineering background
+- Section 1 should list all key updates from the log — nothing invented
+- Section 2 should explain business impact in terms a VP would care about — not engineering outcomes
+- Section 3 language should be readable by someone with no technical background
+- At least one risk should be flagged — if none appear, check the release log yourself before moving on
 
 ---
 
@@ -223,60 +216,38 @@ Rewrite these in simple, non-technical language and flag any risks.
 
 **WHAT YOU ARE DOING**
 
-Before drafting the email you build the business impact layer — what milestone was achieved, which teams benefited, and what value was delivered in measurable terms. This step makes the final email specific and defensible rather than vague. Send each prompt one at a time and let Copilot build the picture progressively.
+Before drafting the email you build the business impact layer — what milestone was achieved, which teams benefited, and what value was delivered in measurable terms. One structured prompt asks for all three things at once, returning a ready-to-use impact summary that feeds directly into Task 1.5.
 
 ---
 
 **DO THIS IN THE APP**
 
 1. Stay in the same conversation
-2. Send each prompt below **one at a time** — each one refines the previous response
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
 
 ---
 
-**PROMPT 1 — COPY INTO COPILOT**
+**COPY INTO COPILOT**
 
 ```
-What milestone was achieved based on this work?
-```
-
-**PROMPT 2 — COPY INTO COPILOT**
-
-```
-Make this more specific and business-relevant.
-```
-
-**PROMPT 3 — COPY INTO COPILOT**
-
-```
-Who (which business units) benefited from this work?
-```
-
-**PROMPT 4 — COPY INTO COPILOT**
-
-```
-Explain briefly how each business unit benefits.
-```
-
-**PROMPT 5 — COPY INTO COPILOT**
-
-```
-What value was delivered (time saved, risk reduced, efficiency gained, cost savings)?
-```
-
-**PROMPT 6 — COPY INTO COPILOT**
-
-```
-Quantify the value where possible (hours saved, % improvement, cost impact).
+Role: You are a team lead at Meridian Analytics building the business impact section of a VP executive update.
+Input: Use the weekly notes and release log from this conversation.
+Format: Respond in three clearly labelled sections:
+  Section 1 — Milestone: What milestone was achieved? Be specific about what was delivered and what it enables for the business — not just "we completed the sprint."
+  Section 2 — Business Units: Which business units benefited from this work? For each one, explain in one sentence how they specifically benefit.
+  Section 3 — Value Delivered: What value was delivered in terms of time saved, risk reduced, efficiency gained, or cost savings? Quantify each item where possible using hours, percentages, or dollar figures.
+Constraints: Use only content from the weekly notes and release log in this conversation. Do not estimate or assume figures not present in the sources.
+Checks: Section 3 must include at least one quantified value. If a figure cannot be sourced from the documents, state that explicitly rather than inventing a number.
 ```
 
 ---
 
 **CHECK YOUR OUTPUT**
 
-- The milestone should be specific — not "we completed the sprint" but what it actually enables for the business
-- Business units should be named, not described generically
-- Value should include at least one number — hours, percentage, or dollar figure
+- Section 1 milestone should be specific and business-relevant — tied to a real outcome, not a process step
+- Section 2 should name actual business units — not "stakeholders" or "teams" generically
+- Section 3 should include at least one number — if Copilot cannot find one, that is a gap to note before drafting the email
 
 ---
 
@@ -306,16 +277,16 @@ Now you use everything built across Tasks 1.2, 1.3, and 1.4 to produce the final
 ```
 Role: You are a team lead at Meridian Analytics writing a weekly executive update for your VP.
 Input: Use the weekly notes, release log, and business impact reflection from this conversation.
-Format: Write a weekly executive update email with:
-  - A clear subject line with the week ending date (Oct 18, 2024)
-  - A short opening summary (2–3 sentences)
-  - 3–5 key highlights
-  - What we shipped (simple business language)
-  - Business impact (milestone, business units, value delivered)
-  - Key risks or watch items
-  - Next steps for the coming week
-Constraints: Under 300 words. VP-level audience, non-technical. Professional, concise, and easy to scan.
-Checks: Every claim must trace back to the weekly notes or release log from this conversation. Remove filler phrases and AI-isms.
+Format: Write a weekly executive update email with clearly labelled sections:
+  - Subject: [subject line with week ending date Oct 18, 2024]
+  - Opening: short summary (2–3 sentences)
+  - Key Highlights: 3–5 bullet points
+  - What We Shipped: simple business language
+  - Business Impact: milestone, business units, value delivered
+  - Risks and Watch Items: key concerns for the VP
+  - Next Steps: actions for the coming week
+Constraints: Under 300 words. VP-level audience, non-technical. Professional, concise, and easy to scan. Use the section labels above as headings so the output is structured and document-ready.
+Checks: Every claim must trace back to the weekly notes or release log from this conversation. Remove filler phrases and AI-isms. This output will be saved as a Word document — ensure it is clean and well-formatted.
 ```
 
 ---
@@ -479,21 +450,25 @@ Before building any registers, you need Copilot to read both files together and 
 **COPY INTO COPILOT**
 
 ```
-Using both attached files as your sources:
-1. Summarize what is confirmed versus still under discussion.
-2. Separate all decisions into three categories: Approved, Proposed, Pending.
-3. For each item, cite which source it came from — Brief or Transcript.
+Role: You are a Product Strategy Analyst at a regional bank preparing for a governance review of the ClearSpend product launch.
+Input: Use both attached files — ClearSpend_Product_Brief.txt and Strategy_Review_Transcript.txt.
+Format: Respond in three clearly labelled sections:
+  Section 1 — Confirmed: Items that are fully decided and agreed across both sources
+  Section 2 — Under Discussion: Items that are proposed, debated, or not yet resolved
+  Section 3 — Decision Status: A categorized list of all decisions as Approved, Proposed, or Pending — with the source cited (Brief or Transcript) for each item
+Constraints: Use only content present in the two attached files. Do not infer or assume anything not stated.
+Checks: Every item must be attributed to its source. If an item appears in both sources, cite both.
 ```
 
 ---
 
 **CHECK YOUR OUTPUT**
 
-- Copilot should reference **both** the brief and the transcript — not just one
-- You should see decisions in all three categories: Approved, Proposed, and Pending
-- Each item should be labelled with its source (Brief or Transcript)
+- Copilot should reference **both** files — not just one
+- All three decision categories should appear: Approved, Proposed, and Pending
+- Every item should show its source — Brief, Transcript, or Both
 
-> If responses only reference one file, paste this recovery prompt and retry:
+> If Copilot only references one file, paste this and retry:
 > `Use both attached files as sources and cite source type for each finding.`
 
 ---
@@ -755,14 +730,15 @@ Before any of these outputs go to a VP briefing, you run a final check. You are 
 **COPY INTO COPILOT**
 
 ```
-For each decision, risk, and action in the outputs from this conversation:
-Indicate:
-  - Source Found: Yes or No
-  - Source Type: Brief or Transcript
-  - Confidence: High, Medium, or Low
-Then:
-  - Flag anything we should not use in a VP briefing
-  - List any missing owner or date fields as blockers
+Role: You are a Product Governance Analyst running a final quality check before a VP briefing.
+Input: Use all decisions, risks, and actions produced in this conversation.
+Format: Produce a verification table with these columns:
+  Item | Source Found (Yes / No) | Source Type (Brief / Transcript / Both) | Confidence (High / Medium / Low)
+Then provide two clearly labelled lists below the table:
+  VP Briefing Flags: anything that should not be presented without further verification
+  Blockers: missing owner or date fields that must be resolved before the briefing
+Constraints: Review only outputs from this conversation. Do not add new information.
+Checks: Every item must have all four columns completed. No field should be left blank.
 ```
 
 ---
@@ -819,15 +795,24 @@ Across Tasks 2.1 to 2.6 you have built multiple separate outputs — registers, 
 
 ```
 Compile all outputs from this conversation into a single governance package document.
-Use these clearly labelled sections in this order:
+Structure it as follows:
+
+Title: ClearSpend Governance Package
+Prepared: [today's date]
+Sources: ClearSpend Product Brief + Strategy Review Transcript
+
+Use these clearly labelled bold headings for each section in this order:
   1. Decision Register
   2. Action Register
   3. Risk Register
   4. Executive Brief (include only if produced in this conversation)
   5. Execution Brief (include only if produced in this conversation)
   6. Verification Summary (include only if produced in this conversation)
-Do not add any new information. Use only what was produced in this conversation.
-Add a cover line at the top: ClearSpend Governance Package | Prepared: [today's date] | Sources: ClearSpend Product Brief + Strategy Review Transcript
+
+Rules:
+- Do not add any new information — use only what was produced in this conversation
+- Use proper headings, tables, and spacing so the document is clean and readable when exported to Word
+- This will be saved as a Word document and shared with leadership — format it accordingly
 ```
 
 ---
@@ -1110,15 +1095,15 @@ Now you produce the two final outputs — a formal leadership memo and a shorter
 ```
 Role: You are the product owner of DevFlow presenting an ROI case to senior leadership.
 Input: Use the financial figures, scenario analysis, and risk assessment from this conversation.
-Format: Write a formal leadership ROI memo with:
-  - Header: To / From / Date / Re
-  - 2-sentence executive summary
-  - ROI highlights (key figures, payback period)
-  - Cost concern section (run cost vs budget — be direct and honest)
-  - Risk table: Risk | ROI Impact | Mitigation
-  - Recommendation with a clear condition (what must be true) and consequence (what happens if not)
-Constraints: Precise, professional language. No filler. Every figure must trace back to the data from this conversation.
-Checks: Do not soften the cost concern. Leadership must see it clearly to make an informed decision.
+Format: Write a formal leadership ROI memo with clearly labelled sections and headings:
+  - MEMO HEADER: To / From / Date / Re
+  - EXECUTIVE SUMMARY: 2 sentences
+  - ROI HIGHLIGHTS: key figures and payback period
+  - COST CONCERN: run cost vs budget — be direct and honest
+  - RISK TABLE: columns — Risk | ROI Impact | Mitigation
+  - RECOMMENDATION: a clear condition (what must be true) and consequence (what happens if not)
+Constraints: Precise, professional language. No filler. Every figure must trace back to the data from this conversation. Use the section labels above as bold headings throughout.
+Checks: Do not soften the cost concern. Leadership must see it clearly. This memo will be saved as a Word document and presented to leadership — format it as a clean, professional document ready for export.
 ```
 
 ---
@@ -1139,9 +1124,16 @@ Checks: Do not soften the cost concern. Leadership must see it clearly to make a
 **FOLLOW-UP — COPY INTO COPILOT**
 
 ```
-Rewrite this as a concise briefing note.
-Keep the same sections but reduce each to 1–2 sentences or a short bullet list.
+Rewrite this as a concise briefing note using this structure:
+
+Title: DevFlow ROI — Briefing Note
+Date: [today's date]
+Prepared by: [your name]
+
+Keep the same sections as the memo but reduce each to 1–2 sentences or a short bullet list.
+Use bold section headings throughout.
 Target length: under 150 words.
+This will be saved as a separate Word document — format it as a clean, standalone briefing note ready to be shared.
 ```
 
 ---
