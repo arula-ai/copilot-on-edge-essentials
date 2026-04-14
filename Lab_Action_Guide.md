@@ -38,17 +38,19 @@ Complete these setup steps before starting Section 1:
 
 ## How the Lab Works
 
-In each section:
+Each section follows the same four-step pattern:
 
-- Open the Microsoft 365 Copilot app
-- Attach the required file(s) to the current conversation
-- Ask short questions first
-- Use follow-ups to refine output
+1. **Attach** the required file(s) to the Copilot conversation
+2. **Read** the task — understand what you are producing and why
+3. **Copy** the structured prompt and paste it into Copilot as-is
+4. **Check** your output against the criteria listed
+
+Every prompt in this lab uses the **RIFCC framework** — Role, Input, Format, Constraints, Checks. You do not need to learn the framework to use this lab; just copy and paste the prompts as written. The framework is explained wherever it first appears.
 
 ### Prompt Labels Used in This Guide
 
-- **Main prompt:** "COPY & PASTE INTO COPILOT"
-- **Follow-up prompt:** "FOLLOW-UP — COPY & PASTE INTO COPILOT"
+- **Main prompt:** "COPY INTO COPILOT"
+- **Follow-up prompt:** "FOLLOW-UP — COPY INTO COPILOT"
 
 ## Data Sensitivity Policy (Training Reminder)
 
@@ -98,17 +100,17 @@ You are a **team lead at Meridian Analytics**. Your VP needs a weekly executive 
 | Step | Task | What You Do |
 |------|------|-------------|
 | Setup | — | Attach `Meridian_Weekly_Notes.docx` |
-| 1 | Task 1.2 | Extract key stories from weekly notes |
-| 2 | Task 1.3 | Attach release log and translate to business language |
-| 3 | Task 1.4 | Reflect on business impact and quantify value |
-| 4 | Task 1.5 | Draft VP-ready executive email |
-| 5 | Task 1.6 | Save output to Pages and export as Word |
+| 1 | Task 1.1 | Extract key stories from weekly notes |
+| 2 | Task 1.2 | Attach release log and translate to business language |
+| 3 | Task 1.3 | Reflect on business impact and quantify value |
+| 4 | Task 1.4 | Draft VP-ready executive email |
+| 5 | Task 1.5 | Save output to Pages and export as Word |
 
 **Output you will produce:** One send-ready executive update email for your VP
 
 ---
 
-### Setup — Do This Before Task 1.2
+### Setup — Do This Before Task 1.1
 
 **DO THIS IN THE APP**
 
@@ -118,11 +120,11 @@ You are a **team lead at Meridian Analytics**. Your VP needs a weekly executive 
 4. Attach `Meridian_Weekly_Notes.docx`
 5. Confirm the file chip is visible in the prompt bar before continuing
 
-> **IMPORTANT:** Do not attach the release log yet — that comes in Task 1.3.
+> **IMPORTANT:** Do not attach the release log yet — that comes in Task 1.2.
 
 ---
 
-### Task 1.2 — Extract Key Stories
+### Task 1.1 — Extract Key Stories
 *Time: 4 minutes*
 
 ---
@@ -164,7 +166,7 @@ Checks: If no risks are found, explicitly state "No risks identified in this doc
 
 ---
 
-### Task 1.3 — Translate the Release Notes
+### Task 1.2 — Translate the Release Notes
 *Time: 5 minutes*
 
 ---
@@ -209,7 +211,7 @@ Checks: Every item in Sections 2 and 3 must trace back to Section 1. If no risks
 
 ---
 
-### Task 1.4 — Business Impact Reflection
+### Task 1.3 — Business Impact Reflection
 *Time: 5 minutes*
 
 ---
@@ -251,14 +253,14 @@ Checks: Section 3 must include at least one quantified value. If a figure cannot
 
 ---
 
-### Task 1.5 — Write the Executive Email
+### Task 1.4 — Write the Executive Email
 *Time: 6 minutes*
 
 ---
 
 **WHAT YOU ARE DOING**
 
-Now you use everything built across Tasks 1.2, 1.3, and 1.4 to produce the final output — a VP-ready executive update email. This is a full RIFCC prompt that gives Copilot a clear role, source, format, constraints, and accuracy rules in one structured instruction.
+Now you use everything built across Tasks 1.1, 1.2, and 1.3 to produce the final output — a VP-ready executive update email. This is a full RIFCC prompt that gives Copilot a clear role, source, format, constraints, and accuracy rules in one structured instruction.
 
 **Output type:** Executive update email — ready to review and send
 
@@ -313,7 +315,7 @@ Keep everything else the same.
 
 ---
 
-### Task 1.6 — Save Your Output as a Document
+### Task 1.5 — Save Your Output as a Document
 *Time: 2 minutes*
 
 ---
@@ -889,17 +891,17 @@ You are the **product owner of DevFlow** — an internal CI/CD tool your enginee
 | Step | Task | What You Do |
 |------|------|-------------|
 | Setup | — | Open workbook and note key figures |
-| 1 | Task 3.2 | Assess ROI and stress-test with three scenarios |
-| 2 | Task 3.3 | Identify risks and consequence impact |
-| 3 | Task 3.4 | Run hallucination check with fabricated benchmark |
-| 4 | Task 3.5 | Write formal ROI memo and briefing note |
-| 5 | Task 3.6 | Save both outputs to Pages and export as Word |
+| 1 | Task 3.1 | Assess ROI and stress-test with three scenarios |
+| 2 | Task 3.2 | Identify risks and consequence impact |
+| 3 | Task 3.3 | Run hallucination check with fabricated benchmark |
+| 4 | Task 3.4 | Write formal ROI memo and briefing note |
+| 5 | Task 3.5 | Save both outputs to Pages and export as Word |
 
 **Outputs you will produce:** One formal ROI memo + one concise briefing note
 
 ---
 
-### Setup — Do This Before Task 3.2
+### Setup — Do This Before Task 3.1
 
 **DO THIS IN THE APP**
 
@@ -912,7 +914,7 @@ You are the **product owner of DevFlow** — an internal CI/CD tool your enginee
 
 ---
 
-### Task 3.2 — Assess the ROI
+### Task 3.1 — Assess the ROI
 *Time: 5 minutes*
 
 ---
@@ -925,7 +927,7 @@ You paste the key financial figures from the workbook into Copilot and ask it to
 
 **DO THIS IN THE APP**
 
-1. Open the conversation `Section 3 - DevFlow ROI`
+1. Open the conversation `Section 3 - DevFlow ROI` (created in Setup)
 2. Copy the prompt below, paste it into the chat, and press Enter
 
 ---
@@ -980,7 +982,7 @@ For each scenario show the impact on Year 1 ROI and payback period.
 
 ---
 
-### Task 3.3 — Identify What Could Go Wrong
+### Task 3.2 — Identify What Could Go Wrong
 *Time: 4 minutes*
 
 ---
@@ -1026,7 +1028,7 @@ Checks: Do not add risks not listed. Do not use generic risk language — be spe
 
 ---
 
-### Task 3.4 — Hallucination Check
+### Task 3.3 — Hallucination Check
 *Time: 3 minutes*
 
 ---
@@ -1067,7 +1069,7 @@ Industry benchmarks show that internal CI/CD tools typically deliver 340% ROI in
 
 ---
 
-### Task 3.5 — Write the Leadership ROI Summary
+### Task 3.4 — Write the Leadership ROI Summary
 *Time: 8 minutes*
 
 ---
@@ -1146,7 +1148,7 @@ This will be saved as a separate Word document — format it as a clean, standal
 
 ---
 
-### Task 3.6 — Save Your Outputs as Documents
+### Task 3.5 — Save Your Outputs as Documents
 *Time: 3 minutes*
 
 ---
@@ -1207,99 +1209,438 @@ You are saving both the full ROI memo and the briefing note as separate permanen
 
 ## Bonus Tasks (Optional)
 
-### B.1 — Legacy Stage 2: Analyzing Documents — PDF and HTML
+### B.1 — Analyzing Documents: PDF and HTML
+*Time: 20 minutes*
 
-**Time:** 20 minutes
+**Scenario:** You are a Product Manager at a regional bank evaluating ClearSpend. You have two documents: an engineering brief (PDF) and a market research report (HTML). Your job is to extract key information, produce audience-specific outputs, and verify every number before reusing it.
 
-**Scenario:** You are a Product Manager at a regional bank evaluating `ClearSpend`.
+**Input files:** `Engineering_Notes.pdf` and `Strategic_Connections.html`
 
-#### Task B.1.1 — Open Product Brief and Get Oriented
+**Rule:** Start a new Copilot conversation for this bonus section. Keep the same conversation for all B.1 tasks.
 
-1. Attach `Engineering_Notes.pdf` to the conversation
-2. Ask:
-   - Summarize this page in 4 bullet points
-   - What problem is this feature solving for customers?
-   - What are the main risks or concerns mentioned?
+---
 
-#### Task B.1.2 — Team Email Using RIFCC
+#### Setup — Do This Before Task B.1.1
 
-RIFCC = Role, Input, Format, Constraints, Checks.
+**DO THIS IN THE APP**
 
-Prompt (condensed):
+1. Open the Microsoft 365 Copilot app and click **New conversation**
+2. Name the conversation: `Bonus - ClearSpend Analysis`
+3. Attach `Engineering_Notes.pdf` using the paperclip icon
+4. Confirm the file chip is visible before continuing
 
-- Role: Product Manager at a regional bank
-- Input: ClearSpend brief on this page
-- Format: Team email (subject, 2-sentence opening, 3 bullets, 1-sentence close)
-- Constraints: under 150 words, warm/professional, no cost figures, no jargon
+---
 
-Follow-up:
+#### Task B.1.1 — Get Oriented on the Product Brief
 
-- Make it more energized while keeping same structure.
+---
 
-#### Task B.1.3 — Executive Summary (Two Formats)
+**WHAT YOU ARE DOING**
 
-Prompt for Version 1 (bullets):
+Before producing any outputs, you ask Copilot three short orientation questions to confirm it has read the document correctly. This is a quality check — it catches misreads before they end up in a draft.
 
-- 4 sections: What We Are Building, Why This Matters, Key Risks, Recommended Next Step
+---
+
+**DO THIS IN THE APP**
+
+1. Confirm the `Engineering_Notes.pdf` file chip is visible
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Manager at a regional bank evaluating a new product brief.
+Input: Use only the attached Engineering_Notes.pdf.
+Format: Answer these three questions in plain language, one answer per question:
+  1. Summarize the document in 4 bullet points
+  2. What problem is this feature solving for customers?
+  3. What are the main risks or concerns mentioned?
+Constraints: Use only content present in the document. Do not add outside context.
+Checks: If a question cannot be answered from the document, say so explicitly.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- All three answers should trace to content in the PDF — nothing invented
+- The problem statement should be customer-focused, not technical
+- At least one risk should be identified — if none appear, check the document yourself
+
+---
+
+#### Task B.1.2 — Write a Team Email
+
+---
+
+**WHAT YOU ARE DOING**
+
+You use the RIFCC framework to produce a team email from the product brief. This task shows how a structured prompt produces a more usable first draft than a vague instruction like "write me an email."
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Manager at a regional bank writing a brief internal update for your team.
+Input: Use only the attached Engineering_Notes.pdf.
+Format: Write a team update email with:
+  - Subject line
+  - 2-sentence opening summarizing what this product does
+  - 3 bullet points covering key points your team needs to know
+  - 1-sentence closing with a clear next step
+Constraints: Under 150 words. Warm but professional tone. No cost figures. No technical jargon.
+Checks: Every bullet point must trace to something in the document. Do not add information not present in the source.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Email should have all four parts: subject, opening, 3 bullets, close
+- Language should be readable by a non-technical colleague
+- No figures or claims that are not in the document
+
+**Then send this follow-up:**
+
+---
+
+**FOLLOW-UP — COPY INTO COPILOT**
+
+```
+Make it more energized and forward-looking while keeping the same structure and word count.
+```
+
+---
+
+#### Task B.1.3 — Write an Executive Summary (Two Formats)
+
+---
+
+**WHAT YOU ARE DOING**
+
+You produce the same content in two different formats — bullet list and short paragraphs — to practise adjusting output format without repeating the full prompt. This is a core skill: same source, same sections, different presentation.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Manager preparing an executive summary for a VP audience.
+Input: Use only the attached Engineering_Notes.pdf.
+Format: Write a bullet-list executive summary with these four clearly labelled sections:
+  - What We Are Building
+  - Why This Matters
+  - Key Risks
+  - Recommended Next Step
+Constraints: Under 200 words total. Business language only — no technical terms.
+Checks: Every section must be based on the document. Do not add assumptions.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- All four sections present and clearly labelled
+- Language is accessible to a VP with no engineering background
 - Under 200 words
-- Business language only
 
-Follow-up for Version 2:
+**Then send this follow-up:**
 
-- Rewrite same content as short paragraphs (same sections, same word limit).
+---
 
-#### Task B.1.4 — Switch to Market Research Report
+**FOLLOW-UP — COPY INTO COPILOT**
 
-1. Attach `Strategic_Connections.html` to the same conversation
-2. Ask:
-   - What are the top 3 trends in this report?
-   - Which trend is most relevant to launching a personal finance dashboard?
-   - If we launch in Q1 2027, are we early, on time, or late?
+```
+Rewrite the same executive summary as short paragraphs instead of bullets.
+Keep the same four sections, same word limit, and same content.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Same four sections, now written as paragraphs
+- Content should be identical to the bullet version — only the format changes
+
+---
+
+#### Task B.1.4 — Switch to the Market Research Report
+
+---
+
+**WHAT YOU ARE DOING**
+
+Now you attach a second document — an HTML market research report — to the same conversation and orient yourself on its content. You are practising multi-document prompting: Copilot now has both files and you direct it to work from the new one.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Click the **paperclip icon** again and attach `Strategic_Connections.html`
+3. Confirm both file chips are now visible
+4. Copy the prompt below and paste it into the chat
+5. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Manager evaluating market research to inform a product launch decision.
+Input: Use only the attached Strategic_Connections.html.
+Format: Answer these three questions in plain language:
+  1. What are the top 3 trends identified in this report?
+  2. Which trend is most relevant to launching a personal finance dashboard?
+  3. Based on this report, if we launch in Q1 2027 — are we early, on time, or late to market?
+Constraints: Use only content present in the HTML report. Do not draw on the PDF from earlier.
+Checks: For question 3, cite the specific part of the report that supports your answer.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Answers should reference the HTML report — not the engineering PDF
+- Question 3 should include a direct citation from the report
+- Trends should be strategic in nature — not just product features
+
+---
 
 #### Task B.1.5 — Find Numbers and Verify
 
-Ask:
+---
 
-- What statistics support investing in a personal finance dashboard now?
-- What does the report say customers expect from digital products in 2026?
+**WHAT YOU ARE DOING**
 
-Then verify citations in source before reusing numbers.
+You ask Copilot to pull out the specific statistics from the market research report that support a business case. Then you manually verify the citations against the source before using any figure in a presentation or document.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Manager building a data-backed case for investing in a personal finance dashboard.
+Input: Use only the attached Strategic_Connections.html.
+Format: Provide two clearly labelled sections:
+  Section 1 — Supporting Statistics: What statistics in this report support investing in a personal finance dashboard now? List each with the exact figure and where in the report it appears.
+  Section 2 — Customer Expectations: What does the report say customers expect from digital products in 2026?
+Constraints: Use only statistics and statements explicitly present in the report. Do not estimate or round figures.
+Checks: Every number must be attributed to its location in the report. Flag any figure that is ambiguous or could be misread.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Every statistic should have a location reference — not just the number
+- Section 2 should reflect customer-facing statements, not internal metrics
+
+**Manual verification step — do this yourself:**
+Pick two numbers from Copilot's response and find them in the HTML file. If you cannot locate a figure in the source, do not use it.
+
+---
 
 #### Task B.1.6 — Write a Risk Briefing Table
 
-Prompt:
+---
 
-- Role: Risk Analyst briefing VP of Digital Banking
-- Input: 2026 Digital Banking & Fintech Innovation Report
-- Output:
-  - 1-sentence intro
-  - Table: Risk | Severity | Business Impact | Recommended Action
-  - Up to 6 rows, ordered high to low severity
-  - 1-sentence conclusion naming most urgent action
-- Constraint: Use only risks explicitly in the report
+**WHAT YOU ARE DOING**
 
-Follow-up:
+You produce a structured risk briefing table for a VP audience — using only risks explicitly found in the market research report. This is the same governance skill used in Section 2, applied to a different document type.
 
-- Add Timeline column (Immediate / Short-term / Long-term).
+---
+
+**DO THIS IN THE APP**
+
+1. Stay in the same conversation
+2. Copy the prompt below and paste it into the chat
+3. Press Enter
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Risk Analyst briefing the VP of Digital Banking on market risks.
+Input: Use only the attached Strategic_Connections.html (2026 Digital Banking and Fintech Innovation Report).
+Format: Produce a risk briefing with:
+  - 1-sentence introduction
+  - Table with columns: Risk | Severity (High / Medium / Low) | Business Impact | Recommended Action
+  - Up to 6 rows, ordered from highest to lowest severity
+  - 1-sentence conclusion naming the single most urgent action
+Constraints: Use only risks explicitly stated in the report. Do not add risks from general knowledge.
+Checks: Every row must trace to a specific part of the report. Do not leave any cell blank.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Table should have up to 6 rows ordered high to low severity
+- Each risk should be traceable to the report — not generic market risk language
+- Conclusion should name one specific action, not a category
+
+**Then send this follow-up:**
+
+---
+
+**FOLLOW-UP — COPY INTO COPILOT**
+
+```
+Add a Timeline column to the risk table.
+Use only these three values: Immediate / Short-term / Long-term.
+Keep everything else the same.
+```
+
+---
 
 ### B.2 — Go/No-Go Decision Summary
 
-Create RAG decision table with 8 factors and final go/no-go condition.
+---
 
-### B.3 — Compose Tab vs RIFCC
+**WHAT YOU ARE DOING**
 
-Compare a quick Compose-generated draft vs a structured RIFCC output for same announcement.
+You produce a RAG (Red / Amber / Green) decision table that gives leadership a structured go/no-go view of the ClearSpend launch. This practises structured decision-output prompting.
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Governance Analyst preparing a go/no-go recommendation for leadership.
+Input: Use only the ClearSpend outputs produced in this conversation.
+Format: Produce a RAG decision table with these columns:
+  Factor | Status (Red / Amber / Green) | Reason | Recommended Action
+Include these 8 factors: Compliance approval, Technical readiness, Pilot size decision, Alert cadence decision, AI recommendations decision, Incident command ownership, Data quality readiness, Budget alignment.
+At the bottom of the table add a single bold line: Go / No-Go / Conditional Go — with a one-sentence condition.
+Constraints: Use only information from this conversation. Mark unknown factors as Red with reason "Not yet assessed."
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- All 8 factors present
+- Final go/no-go line is clearly stated with a condition
+- No factor left blank
+
+---
+
+### B.3 — Compose Tab vs RIFCC Comparison
+
+---
+
+**WHAT YOU ARE DOING**
+
+You compare a quick Compose-tab draft against a RIFCC-structured prompt for the same announcement. The goal is to see the quality difference firsthand — not just read about it.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Use the **Compose** tab to generate a brief product announcement for ClearSpend using the short description field — spend no more than 30 seconds on this
+2. Then open a Copilot chat and send the RIFCC prompt below for the same announcement
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Manager at a regional bank announcing a new personal finance feature to retail customers.
+Input: ClearSpend is a personal finance dashboard that helps customers track spending, set budgets, and receive savings alerts. Launching Q3 2026.
+Format: Write a 3-paragraph customer announcement email:
+  Paragraph 1: What ClearSpend is and what it does for them
+  Paragraph 2: When it is available and how to access it
+  Paragraph 3: What to do next
+Constraints: Under 150 words. Plain language — no banking jargon. Warm and direct tone.
+Checks: Do not include any figures or features not stated in the input above.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+Compare both drafts:
+- Which one required less editing?
+- Which one followed the format more precisely?
+- Which one would you trust more to send without changes?
+
+---
 
 ### B.4 — Video Analysis
 
-Use Copilot on a YouTube video, summarize key points, and identify roadmap implications.
+---
+
+**WHAT YOU ARE DOING**
+
+You use Copilot to analyse a YouTube video, summarize its key points, and identify implications for a product roadmap. This practises a different input type — video rather than a document.
+
+---
+
+**DO THIS IN THE APP**
+
+1. Find a relevant YouTube video (e.g. a product demo, industry keynote, or analyst briefing relevant to your work)
+2. Copy the video URL
+3. Open a new Copilot conversation and paste the URL with the prompt below
+
+---
+
+**COPY INTO COPILOT**
+
+```
+Role: You are a Product Manager reviewing industry content for roadmap insights.
+Input: [paste the YouTube URL here]
+Format: Provide three clearly labelled sections:
+  Section 1 — Key Points: The 5 most important points made in this video
+  Section 2 — Roadmap Implications: Which points are relevant to a product team building a personal finance tool? For each, state the implication in one sentence.
+  Section 3 — Open Questions: What questions does this video raise that are not answered in the content?
+Constraints: Base your response only on content in the video. Do not add outside knowledge.
+Checks: If Copilot cannot access the video, note that and suggest an alternative approach.
+```
+
+---
+
+**CHECK YOUR OUTPUT**
+
+- Key points should reflect actual video content — verify against your own viewing
+- Roadmap implications should be specific, not generic
+- If Copilot says it cannot access the video, try pasting the transcript directly instead
 
 ---
 
 ## Core Takeaways
 
 - Stage prompts for complex writing (extract -> translate -> reflect -> draft)
-- Use short prompts for extraction, RIFCC for professional outputs
+- Use RIFCC prompts for both extraction and professional outputs — one structured prompt beats multiple short ones
 - Format instructions drive quality
 - Verify every number before reuse
 - Follow-up prompts are where quality improves most
